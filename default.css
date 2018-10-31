@@ -1,0 +1,21 @@
+a {
+    text-decoration:none;
+    padding-left: 10px;
+}
+#topbar {
+    border-bottom: 1px solid black
+}
+#content_box_container{
+    display:inline-block;
+    border: 1px solid black;
+}
+#content_box{
+    text-align:left;
+    border-right: 1px solid black;
+}
+#sitemap {
+    float:right;
+}
+#content_title{
+    border-bottom: 1px solid black;
+}
