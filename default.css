@@ -31,5 +31,6 @@ a, a:visited{
 #newest_post_container {
     border: 1px solid black;
     float:right;
-    width: 90%;
+    display:inline-block;
+    width: 90%;;
 }
