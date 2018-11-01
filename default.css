@@ -1,5 +1,9 @@
-#topbar a{
+body{
+    background-color:lightblue;
+}
+#topbar, #topbar a{
     padding-left: 10px;
+    opacity:.80;
 }
 a, a:visited{
     text-decoration:none;
