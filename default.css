@@ -1,6 +1,8 @@
-a {
-    text-decoration:none;
+#topbar a{
     padding-left: 10px;
+}
+a{
+    text-decoration:none;
 }
 #topbar {
     border-bottom: 1px solid black
@@ -18,4 +20,9 @@ a {
 }
 #content_title{
     border-bottom: 1px solid black;
+}
+#NoJS{
+    position:fixed;
+    left: 0;
+    bottom: 0;
 }
