@@ -2,6 +2,9 @@ html {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
    #font-family: "Courier New", Courier, monospace;
 }
+div {
+    background-color:white;
+}
 body{
     background-color:lightblue;
 }
@@ -38,7 +41,9 @@ a, a:visited{
 }
 #newest_post_container {
     border: 1px solid black;
-    float:right;
+    float:left;
     display:inline-block;
     width: 85%;
+    padding-right: 1em;
+    padding-left: 1em;
 }
