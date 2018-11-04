@@ -2,6 +2,9 @@ html {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
    #font-family: "Courier New", Courier, monospace;
 }
+p {
+    text-align:justify;
+} 
 div {
     background-color:white;
 }
