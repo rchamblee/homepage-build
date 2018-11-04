@@ -5,7 +5,7 @@ html {
 p {
     text-align:justify;
 } 
-div {
+#content_box,#content_box_container,#topbar,#content_title,#newest_post_container {
     background-color:white;
 }
 body{
@@ -30,6 +30,10 @@ a, a:visited{
 #content_box{
     text-align:left;
     border-right: 1px solid black;
+}
+#content_wrapper{
+    padding-left:5%;
+    padding-right:5%;
 }
 #sitemap {
     float:right;
