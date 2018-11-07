@@ -54,3 +54,8 @@ a, a:visited{
     padding-right: 1em;
     padding-left: 1em;
 }
+pre{
+    border: 1px solid black;
+    background-color: lightgray;
+}
+

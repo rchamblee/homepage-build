@@ -23,7 +23,7 @@
     
     <a href="/tags/opinion.html">opinion</a>(2) ||
     
-    <a href="/tags/programming.html">programming</a>(1) ||
+    <a href="/tags/programming.html">programming</a>(2) ||
     
     <a href="/tags/javascript.html">javascript</a>(1) ||
     
@@ -31,9 +31,57 @@
     
     <a href="/tags/siteupdate.html">siteupdate</a>(1) ||
     
+    <a href="/tags/jekyll.html">jekyll</a>(1) ||
+    
   </div>
 </div>
 
+<div id="content_wrapper">
+  <div id="content_box" style="padding-left:1em;padding-right:1em;border:1px solid black;">
+      <h2><a href="/2018/11/07/jekyllcategorization.html">Using front matter to categorize posts in Jekyll</a></h2>
+      
+      <a href="/tags/jekyll.html">jekyll</a>&nbsp;
+      
+      <a href="/tags/programming.html">programming</a>&nbsp;
+      
+      <p><p>Using a variable in the front matter, such as tags, we can create an array of words to describe the page which can be accessed by other documents:
+<pre>
+  <code> ---</code>
+  <code>layout: default</code>
+  <code>title: Example</code>
+  <code>author: Author</code>
+  <code>tags: example tutorial </code>
+  <code> ---</code>
+</pre>
+Then, to access posts according to their tag, you can create a new tag page layout with the following code:
+<pre>
+  <code>---</code>
+  <code>layout: default</code>
+  <code>---</code>
+  <code>{% for post in site.tags[page.tag] %}</code>
+  <code>{{ post.title }} - {{ post.date }}</code>
+  <code>{% endfor %}</code>
+</pre>
+Then, create an actual tag page called example.html using the tagpage layout
+<pre>
+  <code>---</code>
+  <code>layout: tagpage</code>
+  <code>tag: example</code>
+  <code>---</code>
+</pre>
+This iterates through the tags array under site, which is a combination of all individual tags arrays on all individual pages. We use a front matter variable called page.tag so that the array loop only returns matches for posts that contain that tag.<br/>
+The purpose of an individual tag's page is to inherit all of the code of the tagpage layout and allow you to set that page's individual tag (page.tag) in the front matter.
+All posts containing that page's tag will be shown on the page.
+<br/><br/>
+Bonus: to access the number of posts in a given tag, access the second value of that tag's array and take the size:
+<pre>
+  <code>{{ site.tags[page.tag][1] | size }}</code>
+</pre>
+</p>
+  </div>
+</div>
+  <br/>
+  
 <div id="content_wrapper">
   <div id="content_box" style="padding-left:1em;padding-right:1em;border:1px solid black;">
       <h2><a href="/2018/11/06/siteupdate.html">Server migration, "feature" additions</a></h2>

@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="/default.css">
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Using front matter to categorize posts in Jekyll</title>
   </head>
   <body>
     <div style="display:block;" id="topbar">
@@ -17,29 +17,17 @@
 	<a href="/blog.html">Blog</a>
       </div>
     </div>
-    <br/>
-<div id="content_box_container">
-  <div id="content_box">
-    <span id="content_title">>Neat Places</span><br/>
-    <a href="https://lainchan.org">&nbsp;Lainchan</a><br/>
-    <a href="https://thedailywtf.com">&nbsp;DailyWTF</a><br/>
-    <a href="https://bitchute.com">&nbsp;Bitchute</a><br/>
-    <a href="https://minds.com">&nbsp;Minds</a><br/>
-    <a href="http://nihilism.rocks">&nbsp;Nihilism</a><br/>
-  </div>
-  <div id="content_box">
-    <span id="content_title">>Neat Tools</span><br/>
-    <a href="https://searx.me">&nbsp;Searx</a><br/>
-    <a href="https://gitgud.io">&nbsp;Gitgud</a><br/>
-    <a href="https://jekyllrb.com">&nbsp;Jekyll</a><br/>
-    <a href="http://golly.sourceforge.net/">&nbsp;Golly</a><br/>
-  </div>
-</div>
-<div id="newest_post_container">
-  <h4>Most Recent Blog Post:
+    <div id="content_box" style="padding-right:1em;padding-left:1em;border: 1px solid black;">
+  <br/>
+  <h1>Using front matter to categorize posts in Jekyll</h1>
+  <p>07 Nov 2018 - Rick</p>
   
-  <a href="/2018/11/07/jekyllcategorization.html">Using front matter to categorize posts in Jekyll</a></h4>
-  <p><p>Using a variable in the front matter, such as tags, we can create an array of words to describe the page which can be accessed by other documents:
+  <a href="/tags/jekyll.html">jekyll</a>&nbsp;
+  
+  <a href="/tags/programming.html">programming</a>&nbsp;
+  
+  <br/>
+  <p>Using a variable in the front matter, such as tags, we can create an array of words to describe the page which can be accessed by other documents:
 <pre>
   <code> ---</code>
   <code>layout: default</code>
@@ -72,12 +60,8 @@ Bonus: to access the number of posts in a given tag, access the second value of 
 <pre>
   <code>{{ site.tags[page.tag][1] | size }}</code>
 </pre>
-</p>
-  
+
 </div>
-
-  
-
 
   </body>
 </html>
